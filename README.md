@@ -1,26 +1,27 @@
-# LeviLamina Mod Template
+# 生命苹果（Life Apple）
 
-Mod Template for LeviLamina
+灵感来自于「生命水晶」，它是一种可以提升玩家最大生命值的物品。
 
-## Usage
+这是一个用于演示的项目，主要展示如何使用 `AttributeModifier` 实现一个简单的血量提升功能。
 
-For detailed instructions, see the [LeviLamina Documentation](https://lamina.levimc.org/developer_guides/tutorials/create_your_first_mod/)
+## 功能
 
-1. Generate a new repository from this template
-2. Clone the new repository
-3. Change the mod name and the expected LeviLamina version in `xmake.lua`
-4. Add your code.
-5. Run `xmake f -y -p windows -a x64 -m release` in the root of the repository
-6. Run `xmake` to build the mod.
+* 玩家可以食用苹果，每次食用会永久提升 **1 点最大生命值**。
+* 最大生命值的提升上限为 **20 点**。
 
-After a successful build, you will find mod in `bin/`
+## 实现
 
-## Contributing
+* **核心逻辑：** 全部实现于 `src\mod\LifeApple.cpp` 文件中。
+* **事件钩子：**
 
-Ask questions by creating an issue.
+  * `PlayerEat`：处理玩家吃苹果的逻辑。
+  * `SharedAttributesLoadAttirbute`：修复玩家重新进入游戏后，血量超过 20 会被 BDS 重置的问题。
 
-PRs accepted.
+## 安装
 
-## License
+```bash
+lip install github.com/Pixovate/LifeApple
+```
+## 协议
 
-CC0-1.0 © LiteLDev
+MIT License © Dofes

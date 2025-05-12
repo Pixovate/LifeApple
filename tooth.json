@@ -1,35 +1,35 @@
 {
     "format_version": 3,
     "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
-    "tooth": "example.com/my-user/my-mod",
-    "version": "0.0.0",
+    "tooth": "github.com/Pixovate/LifeApple",
+    "version": "0.0.1",
     "info": {
-        "name": "My Mod",
-        "description": "Description of my mod",
+        "name": "LifeApple",
+        "description": "A mod that makes the apple can boost your health.",
         "tags": [
-            "platform:levilamina",
-            "type:mod"
+            "attributeModifier",
+            "lifeapple",
+            "type:mod",
+            "platform:levilamina"
         ],
-        "avatar_url": "https://example.com/my-mod/avatar.png"
+        "avatar_url": ""
     },
     "variants": [
         {
             "label": "",
             "platform": "win-x64",
-            "dependencies": {
-                "github.com/LiteLDev/LeviLamina": "Required LeviLamina version range"
-            },
+            "dependencies": {},
             "assets": [
                 {
                     "type": "zip",
                     "urls": [
-                        "https://example.com/my-mod/assets.zip"
+                        "https://github.com/Pixovate/LifeApple/releases/download/v0.0.1/LifeApple-levilamina-windows.zip"
                     ],
                     "placements": [
                         {
                             "type": "dir",
-                            "src": "my-mod/",
-                            "dest": "plugins/my-mod/"
+                            "src": "LifeApple/",
+                            "dest": "plugins/LifeApple/"
                         }
                     ]
                 }
